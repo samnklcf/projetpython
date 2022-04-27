@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mon profil</title>
+</head>
+<body>
+    <h1>Bienvenue {{ user.username }}</h1>
+    <img src="{{ request.user.profil.avatar.url }}" alt="" height="300" width="300">
+    <h2><b>Mon site web: <a href="{{ request.user.profil.site_web }}">{{ request.user.profil.site_web }}</a></b></h2>
+    <b>Ma signature: <span>{{ request.user.profil.signature }}</span></b>
+
+    {% for cvs in cv %}
+                {% if cvs.user.username == request.user.username %}
+                <div class="cart">
+                    <div class="sect1">
+                        <img src="{{ cvs.photo.url }}" alt="" width="200px" height="200px">
+                        <p>{{ cvs.user.username }}</p>
+                    </div>
+                    <div class="sect2">
+                        <p>Nom</p>
+                        <b>{{ cvs.nom }}</b>
+                        <p>Prénom</p>
+                        <b>{{ cvs.prenom }}</b>
+                        <p>Profession</p>
+                        <b>{{ cvs.qualification }}</b>
+                        <a href="{% url 'voir' cvs.pk %}"><div class="voir">
+                            VOIR
+                        </div></a>
+                    </div>
+                </div>
+                {% endif %}
+            {% endfor %}
+</body>
+</html>

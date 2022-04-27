@@ -1,0 +1,412 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./statics/css/style.css">
+    <title>Lire plus</title>
+</head>
+<body id="corp">
+    <header class='header'>
+          <h3><a href="#">Lire<span style="color:#152857;">Plus</span></a></h3>
+        <nav>
+            <ul class="menu">
+                
+                <li><a href="#main">News Books</a></li>
+                <li class="cc"><b>Catégories&rsaquo;</b>
+                    <ul class="cat">
+                        <div class="cat1">
+                            <li><a href="#">Art musique et cinéma</a></li>
+                            <li><a href="#">Développement personnel</a></li>
+                            <li><a href="#">Informatique et internet</a></li>
+                        </div>
+
+                        <div class="cat2">
+                            <li><a href="#">Réligion et spiritualité</a></li>
+                            <li><a href="#">Roman</a></li>
+                            <li><a href="#">Droit et économie</a></li>
+                        </div>
+                        
+                        <div class="cat3">
+                            <li><a href="#">Cuisine</a></li>
+                            <li><a href="#">Science et médécine</a></li>
+                            <li><a href="#">Bandes déssinées</a></li>
+                        </div>
+                        
+                        <div class="cat4">
+                            <li><a href="#">Dictionnaire et langue</a></li>
+                            <li><a href="#">Tourisme et voyage</a></li>
+                        </div>
+                    </ul>
+                </li>
+                <li><a href="#footer">A propos</a></li>
+                
+            </ul>
+        </nav>
+        <div>
+          <span>&lsaquo;</span><img class="userphoto" src="./statics/images/pexels-gabb-tapique-3155588 (2).jpg" alt="" height="40" width="40">
+           <ul>
+               <li><b style="color: #999999;">1/3 livres</b></li>
+               <li><a href="#">Enregistrés</a></li>
+               <li><a href="#">Mon compte</a></li>
+               <button class="btn"><a  class="logout" href="#">Se déconnecter</a></button>
+           </ul>
+        </div>
+        <svg xmlns="http://www.w3.org/2000/svg" width="25" height="65" viewBox="0 0 80 65" class="ouvrir">
+            <g id="Groupe_1" data-name="Groupe 1" transform="translate(-941 -276)">
+              <rect id="Rectangle_2" data-name="Rectangle 2" width="80" height="14" rx="5" transform="translate(941 276)" fill="#252525"/>
+              <rect id="Rectangle_3" data-name="Rectangle 3" width="80" height="14" rx="5" transform="translate(941 300)" fill="#252525"/>
+              <rect id="Rectangle_4" data-name="Rectangle 4" width="80" height="14" rx="5" transform="translate(941 324)" fill="#252525"/>
+            </g>
+          </svg>  
+    </header>
+
+
+    <div class="menu2">
+        <svg xmlns="http://www.w3.org/2000/svg" width="23" height="65" viewBox="0 0 68.589 68.589" class="fermer">
+            <g id="Groupe_2" data-name="Groupe 2" transform="translate(-1085.705 -319.205)">
+              <rect id="Rectangle_5" data-name="Rectangle 5" width="80" height="14" rx="5" transform="translate(1097.726 319.205) rotate(45)" fill="#252525"/>
+              <rect id="Rectangle_6" data-name="Rectangle 6" width="80" height="14" rx="5" transform="translate(1154.295 331.226) rotate(135)" fill="##252525"/>
+            </g>
+          </svg>
+        
+          <ul class="liste">
+                
+            <li><a href="#main"><h1>News Books</h1></a></li>
+            <li class="minicat"><h1>Catégories&rsaquo;</h1>
+                <ul>
+                    
+                        <li><a href="#">Art musique et cinéma</a></li>
+                        <li><a href="#">Développement personnel</a></li>
+                        <li><a href="#">Informatique et internet</a></li>
+                   
+
+                   
+                        <li><a href="#">Réligion et spiritualité</a></li>
+                        <li><a href="#">Roman</a></li>
+                        <li><a href="#">Droit et économie</a></li>
+                   
+                    
+                    
+                        <li><a href="#">Cuisine</a></li>
+                        <li><a href="#">Science et médécine</a></li>
+                        <li><a href="#">Bandes déssinées</a></li>
+                  
+                    
+
+                        <li><a href="#">Dictionnaire et langue</a></li>
+                        <li><a href="#">Tourisme et voyage</a></li>
+                        
+                    
+                </ul>
+    
+                    
+            </li>
+            <li><a href="#footer"><h1>A-propos</h1></a></li>
+            <div class="compte">
+
+                <p style="display: flex; align-items: center; gap: 10px;"><span style="font-size: 34px; transform: rotate(-90deg);">&lsaquo;</span><img class="userphoto" src="./statics/images/pexels-gabb-tapique-3155588 (2).jpg" alt="" height="40" width="40"></p>
+                 <ul>
+                     <li><b style="color: #999999;">1/3 livres</b></li>
+                     <li><a href="#">Enregistrés</a></li>
+                     <li><a href="#">Mon compte</a></li>
+                     <button class="btn"><a  class="logout" href="#">Se déconnecter</a></button>
+                 </ul>
+            </div>
+            
+        </ul>
+        
+          
+    </div>
+    <div class="container">
+        
+        <div class="search">
+            <form action="." method="get" class="form"> 
+                <input type="search" name="search" required class="enter" placeholder="Auteur, titre, catégorie ..." autocomplete="off">
+                <input type="submit" value="Recherche" class="valid">
+            </form>
+            
+        </div>
+        <main id="main">
+            <div class="add">
+                <h2>Ajouter récemment</h2>
+            </div>
+            <div class="grid">
+                <div class="cart">
+                    <div class="photo">
+                        <img src="./statics/images/1.jpg" alt="">
+                    </div>
+                    <div class="voir">
+                        <div class="button"><a href="#">voir</a></div>
+                        
+                    </div>
+                </div>
+                <div class="cart">
+                    <div class="photo">
+                        <img src="./statics/images/2.jpg" alt="">
+                    </div>
+                    <div class="voir">
+                        <div class="button"><a href="#">voir</a></div>
+                        
+                    </div>
+                </div>
+                <div class="cart">
+                    <div class="photo">
+                        <img src="./statics/images/3.jpg" alt="">
+                    </div>
+                    <div class="voir">
+                        <div class="button"><a href="#">voir</a></div>
+                        
+                    </div>
+                </div>
+                <div class="cart">
+                    <div class="photo">
+                        <img src="./statics/images/4.jpg" alt="">
+                    </div>
+                    <div class="voir">
+                        <div class="button"><a href="#">voir</a></div>
+                        
+                    </div>
+                </div>
+                <div class="cart">
+                    <div class="photo">
+                        <img src="./statics/images/5.jpg" alt="">
+                    </div>
+                    <div class="voir">
+                        <div class="button"><a href="#">voir</a></div>
+                        
+                    </div>
+                </div>
+                <div class="cart">
+                    <div class="photo">
+                        <img src="./statics/images/6.jpg" alt="">
+                    </div>
+                    <div class="voir">
+                        <div class="button"><a href="#">voir</a></div>
+                        
+                    </div>
+                </div>
+                <div class="cart">
+                    <div class="photo">
+                        <img src="./statics/images/7.jpg" alt="">
+                    </div>
+                    <div class="voir">
+                        <div class="button"><a href="./detail.html">voir</a></div>
+                        
+                    </div>
+                </div>
+                <div class="cart">
+                    <div class="photo">
+                        <img src="./statics/images/8.jpg" alt="" >
+                    </div>
+                    <div class="voir">
+                        <div class="button im"><a href="#">voir</a></div>
+                        
+                    </div>
+                </div>
+                <div class="cart">
+                    <div class="photo">
+                        <img src="./statics/images/9.jpg" alt="">
+                    </div>
+                    <div class="voir">
+                        <div class="button"><a href="#">voir</a></div>
+                        
+                    </div>
+                </div>
+
+                <div class="cart">
+                    <div class="photo">
+                        <img src="./statics/images/1.jpg" alt="">
+                    </div>
+                    <div class="voir">
+                        <div class="button"><a href="#">voir</a></div>
+                        
+                    </div>
+                </div>
+                <div class="cart">
+                    <div class="photo">
+                        <img src="./statics/images/2.jpg" alt="">
+                    </div>
+                    <div class="voir">
+                        <div class="button"><a href="#">voir</a></div>
+                        
+                    </div>
+                </div>
+                <div class="cart">
+                    <div class="photo">
+                        <img src="./statics/images/3.jpg" alt="">
+                    </div>
+                    <div class="voir">
+                        <div class="button"><a href="#">voir</a></div>
+                        
+                    </div>
+                </div>
+                <div class="cart">
+                    <div class="photo">
+                        <img src="./statics/images/4.jpg" alt="">
+                    </div>
+                    <div class="voir">
+                        <div class="button"><a href="#">voir</a></div>
+                        
+                    </div>
+                </div>
+                <div class="cart">
+                    <div class="photo">
+                        <img src="./statics/images/5.jpg" alt="">
+                    </div>
+                    <div class="voir">
+                        <div class="button"><a href="#">voir</a></div>
+                        
+                    </div>
+                </div>
+                <div class="cart">
+                    <div class="photo">
+                        <img src="./statics/images/6.jpg" alt="">
+                    </div>
+                    <div class="voir">
+                        <div class="button"><a href="#">voir</a></div>
+                        
+                    </div>
+                </div>
+                <div class="cart">
+                    <div class="photo">
+                        <img src="./statics/images/7.jpg" alt="">
+                    </div>
+                    <div class="voir">
+                        <div class="button"><a href="#">voir</a></div>
+                        
+                    </div>
+                </div>
+                <div class="cart">
+                    <div class="photo">
+                        <img src="./statics/images/8.jpg" alt="" >
+                    </div>
+                    <div class="voir">
+                        <div class="button im"><a href="#">voir</a></div>
+                        
+                    </div>
+                </div>
+                <div class="cart">
+                    <div class="photo">
+                        <img src="./statics/images/9.jpg" alt="">
+                    </div>
+                    <div class="voir">
+                        <div class="button"><a href="#">voir</a></div>
+                        
+                    </div>
+                </div>
+
+                <div class="cart">
+                    <div class="photo">
+                        <img src="./statics/images/8.jpg" alt="" >
+                    </div>
+                    <div class="voir">
+                        <div class="button im"><a href="#">voir</a></div>
+                        
+                    </div>
+                </div>
+                <div class="cart">
+                    <div class="photo">
+                        <img src="./statics/images/9.jpg" alt="">
+                    </div>
+                    <div class="voir">
+                        <div class="button"><a href="#">voir</a></div>
+                        
+                    </div>
+                </div>
+                
+            </div>
+        </main>
+        
+    
+    </div>
+
+    <section class="pagination">
+        <a href="#">
+            <div class="previous">
+                <svg xmlns="http://www.w3.org/2000/svg" width="15" height="25" viewBox="0 0 20 40">
+                    <path id="Left_Arrow_2" data-name="Left Arrow 2" d="M803.707,3467.707h0L786.377,3486l17.33,18.293h0a1,1,0,1,1-1.414,1.414h0l-18-19h0a1,1,0,0,1,0-1.414l18-19a1,1,0,1,1,1.414,1.414Z" transform="translate(-784 -3466)" fill-rule="evenodd"/>
+                </svg>
+              
+            </div>
+        </a>
+
+
+        <a href="#">
+            <div class="next">
+                <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="15" height="25" viewBox="0 0 20 40">
+                    <defs>
+                    <clipPath id="clip-path">
+                        <rect width="20" height="40" fill="none"/>
+                    </clipPath>
+                    </defs>
+                    <g id="Grille_de_répétition_1" data-name="Grille de répétition 1" clip-path="url(#clip-path)">
+                    <g transform="translate(-868 -3466)">
+                        <path id="Right_Arrow_2" data-name="Right Arrow 2" d="M887.707,3486.707h0l-18,19h0a1,1,0,1,1-1.414-1.414h0L885.623,3486l-17.33-18.293h0a1,1,0,1,1,1.414-1.414l18,19a1,1,0,0,1,0,1.414Z" fill-rule="evenodd"/>
+                    </g>
+                    </g>
+                </svg>
+                
+            </div>
+        </a>
+
+    </section>
+
+
+    
+    <div class="copyright">
+        <p>All right reserved by Sam Nk Lcf @Copyright 2022</p>
+    </div>
+    <script>
+       
+        var ouvrir = document.querySelector('.ouvrir');
+        var menu = document.querySelector('.menu2');
+        var fermer = document.querySelector('.fermer');
+        var header = document.querySelector('header')
+        
+        
+
+        /*window.addEventListener('scroll', (e) =>{
+            const scr = window.pageYOffset;
+           
+            if(scr > 10) {
+                header.style.background = 'rgba(255, 255, 255, 0.993)'
+            }else{
+                header.style.background = 'transparent'
+            }
+            console.log(scr)
+
+            if(scr >= 2){
+                header.style.height = '70px'
+            }else{
+                header.style.height = '90px'
+            }
+        
+        })*/
+
+        ouvrir.addEventListener('click', function(){
+            console.log(menu);
+            
+
+            menu.style.left = 0;
+           
+
+            
+            fermer.style.display = 'block';
+
+        });
+
+        fermer.addEventListener('click', function(){
+            menu.style.left = '100%';
+            
+           
+        })
+        
+        
+            
+    
+       
+    </script>
+</body>
+</html>

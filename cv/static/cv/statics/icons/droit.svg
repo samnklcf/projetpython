@@ -1,0 +1,12 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="20" height="40" viewBox="0 0 20 40">
+  <defs>
+    <clipPath id="clip-path">
+      <rect width="20" height="40" fill="none"/>
+    </clipPath>
+  </defs>
+  <g id="Grille_de_répétition_1" data-name="Grille de répétition 1" clip-path="url(#clip-path)">
+    <g transform="translate(-868 -3466)">
+      <path id="Right_Arrow_2" data-name="Right Arrow 2" d="M887.707,3486.707h0l-18,19h0a1,1,0,1,1-1.414-1.414h0L885.623,3486l-17.33-18.293h0a1,1,0,1,1,1.414-1.414l18,19a1,1,0,0,1,0,1.414Z" fill-rule="evenodd"/>
+    </g>
+  </g>
+</svg>

@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Resultat</title>
+    {% load static %}
+    <link rel="stylesheet" href="{% static 'cv/index.css' %}">
+    <style>
+        p {
+            margin-top: 10px;
+        }
+
+        .pop {
+            z-index: 11;
+            
+            height: 20px;
+            padding: 30px;
+            background-color: rgba(70, 70, 245, 0.342);
+            backdrop-filter: blur(12px);
+            border-radius: 5px;
+            justify-content: center;
+            align-items: center;
+            color: white;
+            position: fixed;
+            top: 60px;
+            right: 0;
+            transition: all 1s ease-out;
+            display: none;
+
+
+
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1 style="cursor: pointer;">Mon CV</h1>
+    </header>
+    
+    <main class="main">
+        <a href="{% url 'list' %}">
+            <article class="pop">
+                <b>RETOUR</b>
+
+            </article>
+        </a>    
+        
+            <div class="section1">
+                
+                <img src="{{ cv.photo.url }}" alt="Phto" width="171">
+            </div>
+            
+            <div class="section2">
+                
+                <div class="part1">
+                    <p>Nom</p>
+                    <b>{{ cv.nom }}</b> 
+                    <p>Prénom</p>
+                    <b>{{ cv.prenom }}</b>
+                    <p>Date de naissance</p>
+                    <b>{{ cv.date_de_naissance }}</b>
+                </div>
+                <div class="part2">
+                    <p>Lieu de naissance</p>
+                    <b>{{ cv.lieu_de_naissance }}</b>
+                    <p>Numéro de téléphone</p>
+                    <b>{{ cv.numero_telephone }}</b>
+                </div>    
+                <div class="part3">
+                    <p>Diplôme</p>
+                    <b>{{ cv.dipomes }}</b>
+                    <p>Dernier diplôme</p>
+                    <b>{{ cv.last_diplome }}</b>
+                </div>
+                <div class="part4">
+                    <p>Expérience</p>
+                    <b>{{ cv.experience }} ans</b>
+                    <p>Dernier job</p>
+                    <b>{{ cv.last_job }}</b>
+                </div>
+                <section class="part5" style="background-color: rgb(70, 70, 245); width: 434px;height: 253px;">
+                    <p>Mes objectifs</p>
+                    <article class="bio">
+                        <b>{{ cv.biograpy }}</b>
+                    </article>
+                </section>
+
+            </div>
+    
+    </main>
+    <footer>
+        <p>CvGenerator by @Sam Nk Lcf</p>
+    </footer>
+
+    <script>
+        var titre = document.querySelector('h1');
+        var pop = document.querySelector('.pop');
+
+        titre.addEventListener('click', () => {
+            print()
+            titre.style.display = 'none';
+            pop.style.display = 'flex';
+        })
+    </script>
+</body>
+</html>

@@ -1,0 +1,233 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    {% load static %}
+    <link rel="stylesheet" href="{% static 'cv/style.css' %}">
+<script src="{% static 'cv/sc.js' %}" defer></script>
+<style>
+::-webkit-scrollbar {
+    width: 0px;
+}
+
+
+
+    body {
+        margin: 0 auto;
+    }
+
+    .main {
+    
+   
+    background-color: #ffffff;
+    text-align: center;
+    
+}
+a {
+    text-decoration: none;
+    color: rgb(70, 70, 245);
+}
+
+h4{
+    margin-top: 12px;
+    font-size: 13px;
+    font-weight: 100;
+}
+
+.cart .sect1 img {
+    border-radius: 50%;
+}
+
+.main .container {
+    
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding-top: 40px;
+    overflow-y: scroll;
+    
+    
+    
+    
+
+}
+
+.main .container .cart {
+    display: flex;
+    height: 400px;
+    width: 500px;
+    background-color: white;
+    border-radius: 5px;
+    box-shadow: 0px 0px 12px rgb(190, 190, 190);
+    margin-top: 30px;
+    
+}
+
+
+.main .container .cart .sect1 {
+    display: flex;
+    justify-content: center;
+    background-color: rgb(243, 243, 243);
+    width: 50%;
+    padding-top: 30px;
+    border-radius: 5px;
+}
+
+.main .container .cart .sect2{
+    display: flex;
+    flex-direction: column;
+    justify-content: end;
+    align-items: flex-start;
+    background-color: var(--color-2);
+    width: 50%;
+    padding-left: 20px;
+    padding-bottom: 30px;
+    border-top-left-radius: 0px;
+    border-bottom-left-radius: 0px;
+    border-bottom-right-radius: 5px;
+    border-top-right-radius: 5px;
+    color: white;
+}
+
+.sect2 .voir {
+    padding: 8px 40px 8px 40px;
+    background-color: white;
+    margin-top: 12px;
+    border-radius: 4px;
+    color: var(--color-2);
+    font-weight: 700;
+
+}
+
+
+.main h1 {
+    color: var(--color-2);
+    margin-top: 100px;
+}
+
+
+
+
+
+
+
+
+
+.main .btn {
+    margin-top: 12px;
+    background-color: white;
+    text-align: center;
+    padding: 12px;
+    border-radius: 5px;
+    color: var(--color-2);
+    font-size: 18px;
+    font-weight: 700;
+    transition: all .5s ease;
+    cursor: pointer;
+
+
+}
+
+header {
+    position: fixed;
+    top: 0;
+    right: 0;
+    left: 0;
+}
+
+.sect2 p {
+    font-size: 12px;
+    margin-top: 4px;
+    text-decoration: underline;
+}
+.sect2 p::after {
+    content: ':';
+}
+
+.cursor {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    border: 1px solid black;
+    box-sizing: border-box;
+    transform: translate(-50%, -50%);
+    
+   
+}
+
+
+
+</style>
+</head>
+<body>
+   <header>
+        <nav>
+            <div class="logo"><a href="{% url 'home' %}"><h1>CV</h1></div></a>
+            <div class="open">
+                <svg class="sam" xmlns="http://www.w3.org/2000/svg" width="35"  viewBox="0 0 80 65">
+                    <g id="Groupe_1" data-name="Groupe 1" transform="translate(-941 -276)">
+                    <rect id="Rectangle_2" data-name="Rectangle 2" width="80" height="17" rx="8.5" transform="translate(941 276)" fill="#fff"/>
+                    <rect id="Rectangle_3" data-name="Rectangle 3" width="80" height="17" rx="8.5" transform="translate(941 300)" fill="#fff"/>
+                    <rect id="Rectangle_4" data-name="Rectangle 4" width="80" height="17" rx="8.5" transform="translate(941 324)" fill="#fff"/>
+                    </g>
+                </svg>
+            </div>
+            <ul class="menu">
+                <li><a href="{% url 'home' %}">Acceuil</a></li>
+                <li><a href="{% url 'list' %}">Liste</a></li>
+                <li><a href="{% url 'add' %}">Ajouter</a></li>
+                {% if user.is_authenticated %}
+                <li><a href="{% url 'logout' %}">Deconnexion</a></li>
+                
+                {% endif %}
+                <li><a href="{% url 'monprofil' %}"><img src="{{ request.user.profil.avatar.url }}" alt="" width="30" height="30" style="border-radius: 50%;"></a></li>
+                <div class="close">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="35" viewBox="0 0 68.589 68.589">
+                        <g id="Groupe_2" data-name="Groupe 2" transform="translate(-1085.705 -319.205)">
+                        <rect id="Rectangle_5" data-name="Rectangle 5" width="80" height="17" rx="8.5" transform="translate(1097.726 319.205) rotate(45)" fill="#fff"/>
+                        <rect id="Rectangle_6" data-name="Rectangle 6" width="80" height="17" rx="8.5" transform="translate(1154.295 331.226) rotate(135)" fill="#fff"/>
+                        </g>
+                    </svg>
+                    
+                </div>
+            </ul>
+
+        </nav>
+   </header>
+
+   <main class="main">
+        <h1>LISTE DES CV DISPONIBLES,{{ user.username }}</h1>
+        <div class="container">
+            {% for cvs in cv %}
+                
+                <div class="cart">
+                    <div class="sect1">
+                        <img src="{{ cvs.photo.url }}" alt="" width="200px" height="200px">
+                        <p>{{ cvs.user.username }}</p>
+                    </div>
+                    <div class="sect2">
+                        <p>Nom</p>
+                        <b>{{ cvs.nom }}</b>
+                        <p>Prénom</p>
+                        <b>{{ cvs.prenom }}</b>
+                        <p>Profession</p>
+                        <b>{{ cvs.qualification }}</b>
+                        <a href="{% url 'voir' cvs.pk %}"><div class="voir">
+                            VOIR
+                        </div></a>
+                    </div>
+                </div>
+            {% endfor %}
+        </div>
+        <button><a href="{% url 'logout' %}">Déconnexion</a></button>
+    </main>
+
+    
+           
+
+
+</body> 
+</html>

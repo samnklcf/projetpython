@@ -1,0 +1,13 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="24" height="24" viewBox="0 0 24 24">
+  <defs>
+    <clipPath id="clip-path">
+      <rect width="24" height="24" fill="none"/>
+    </clipPath>
+  </defs>
+  <g id="les_livres_zz" data-name="les livres zz" clip-path="url(#clip-path)">
+    <g id="les_livres_zz-2" data-name="les livres zz">
+      <path id="Tracé_203" data-name="Tracé 203" d="M0,0H24V24H0Z" fill="none"/>
+      <path id="Tracé_204" data-name="Tracé 204" d="M18,2H6A2.006,2.006,0,0,0,4,4V20a2.006,2.006,0,0,0,2,2H18a2.006,2.006,0,0,0,2-2V4A2.006,2.006,0,0,0,18,2ZM6,4h5v8L8.5,10.5,6,12Z"/>
+    </g>
+  </g>
+</svg>

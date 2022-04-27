@@ -1,0 +1,127 @@
+:root {
+    --color-1: #373838;
+    --color-2: rgb(70, 70, 245);
+
+}
+
+body {
+    font-family: sans-serif;
+
+
+
+}
+
+* {
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+
+}
+
+nav {
+    background-color: var(--color-1);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 10vh;
+}
+
+nav .logo {
+    color: var(--color-2);
+    margin: 40px;
+    cursor: pointer;
+    font-size: 1.5rem;
+    transition: all .3s ease;
+
+
+}
+
+nav .menu {
+    display: flex;
+
+
+    list-style: none;
+    transition: all .4s ease;
+
+
+
+}
+
+nav .menu li a {
+    display: inline-block;
+    padding: 15px;
+    text-decoration: none;
+    color: white;
+    font-size: 1.5rem;
+    font-weight: 400;
+    /*margin-right: 12px;*/
+    transition: all .5s ease;
+
+
+}
+
+nav .menu li a:hover {
+    background-color: var(--color-2);
+}
+
+nav .open {
+    display: none;
+    margin: 20px;
+    cursor: pointer;
+    transition: all .5s ease;
+
+}
+
+nav .close {
+    display: none;
+    margin: 2rem;
+    cursor: pointer;
+
+}
+
+@media(max-width:800px) {
+    nav .menu {
+        display: none;
+        flex-direction: column;
+        justify-content: center;
+        align-self: center;
+
+        background-color: #37383891;
+        backdrop-filter: blur(5px);
+        height: 0vh;
+        position: fixed;
+        top: 0;
+        right: 0;
+        left: 0;
+        margin: 6px;
+
+        
+
+
+
+
+
+
+
+    }
+
+    nav .open {
+        display: block;
+    }
+
+    nav .logo {
+        margin: 20px;
+        font-size: 1.3rem;
+        padding: 30px;
+
+    }
+
+    nav .close {
+        display: block;
+        position: fixed;
+        top: 20px;
+        right: 20px;
+        
+    }
+}
+

@@ -1,0 +1,150 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+
+}
+
+body {
+
+    width: 730px;
+    margin: 0 auto;
+
+}
+
+.main {
+
+    display: flex;
+    height: 1024px;
+    position: relative;
+
+
+
+}
+
+.main .section1 {
+    width: 258px;
+    background-color: white;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding-top: 163px;
+
+}
+
+.main .section1 img {
+    border-radius: 5px;
+}
+
+.main .section2 {
+    display: grid;
+    grid-template-areas:
+         
+        "part1  part1   part2   part2"
+        "part3   part3   part4   part4"
+        "part5   part5   part5   part5";
+    grid-gap: 5px;
+    place-content: center;
+    margin-left: 7px;
+    background-color: rgb(233, 233, 233);
+    padding: 12px;
+    text-align: center;
+    position: relative;
+
+}
+
+.main .section2 div {
+
+    width: 212px;
+    height: 218px;
+    border-radius: 5px;
+    margin-bottom: 2px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding-left: 12px;
+    text-align: left;
+
+
+}
+
+
+.main .section2 div p, .main .section2 section p {
+    font-size: 12px;
+}
+
+.main .section2 div b {
+    font-family: sans-serif;
+}
+
+
+.main .section2 .part1 {
+    grid-area: part1;
+    background-color: white;
+    color: rgb(70, 70, 275);
+}
+
+.main .section2 .part2 {
+    grid-area: part2;
+    background-color: rgb(70, 70, 275);
+    color: white;
+}
+
+.main .section2 .part3 {
+    grid-area: part3;
+    background-color: rgb(70, 70, 275);
+    color: white;
+}
+
+.main .section2 .part4 {
+    grid-area: part4;
+    background-color: white;
+    color: rgb(70, 70, 275);
+
+}
+
+.main .section2 .part5 {
+    grid-area: part5;
+    padding-left: 12px;
+    padding-top: 12px;
+    border-radius: 5px;
+    color: white;
+    text-align: left;
+}
+
+
+
+
+.part5 .bio {
+    text-align: justify;
+    padding-right: 12px;
+    font-family: sans-serif;
+}
+
+footer {
+    background-color: rgb(70, 70, 275);
+    height: 5vh;
+    width: 100%;
+    color: white;
+    display: grid;
+    place-content: center;
+    position: fixed;
+    bottom: 0;
+    right: 0;
+    left: 0;
+    z-index: 10;
+}
+
+header {
+    color: white;
+    height: 50px;
+    background-color: rgb(70, 70, 275);
+    display: grid;
+    place-content: center;
+    position: fixed;
+    top: 0;
+    right: 0;
+    left: 0;
+    z-index: 10;
+
+}

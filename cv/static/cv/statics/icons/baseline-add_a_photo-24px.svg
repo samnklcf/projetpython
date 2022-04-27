@@ -1,0 +1,10 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="24" height="24" viewBox="0 0 24 24">
+  <defs>
+    <clipPath id="clip-path">
+      <path id="Tracé_1481" data-name="Tracé 1481" d="M24,24H0V0H24Z"/>
+    </clipPath>
+  </defs>
+  <g id="baseline-add_a_photo-24px" clip-path="url(#clip-path)">
+    <path id="Tracé_1480" data-name="Tracé 1480" d="M3,4V1H5V4H8V6H5V9H3V6H0V4Zm3,6V7H9V4h7l1.83,2H21a2.006,2.006,0,0,1,2,2V20a2.006,2.006,0,0,1-2,2H5a2.006,2.006,0,0,1-2-2V10Zm7,9a5,5,0,1,0-5-5A5,5,0,0,0,13,19ZM9.8,14A3.2,3.2,0,1,0,13,10.8,3.2,3.2,0,0,0,9.8,14Z"/>
+  </g>
+</svg>

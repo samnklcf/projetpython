@@ -1,0 +1,247 @@
+@font-face {
+    font-family: 'mt';
+    src: url('/aouvrir/statics/fonts/Montserrat-Regular.ttf');
+}
+
+
+
+
+
+:root {
+    --color-4: #E6E9F1;
+    --fontblanc: #fff;
+    --bleu: #152857;
+    --green: #304D42;
+    --black: #252525;
+
+
+}
+
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+    font-family: 'mt';
+
+
+}
+
+
+
+
+body {
+    background-color: var(--color-4);
+    position: relative;
+
+
+}
+
+a {
+    text-decoration: none;
+    color: #252525;
+}
+
+header {
+    background-color: white;
+    height: 70px;
+    margin-bottom: 30px;
+
+}
+
+header nav {
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 200px;
+
+}
+
+header nav h3 span {
+    color: var(--bleu);
+
+}
+
+header nav p {
+    font-weight: 900;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 6px;
+}
+
+
+main h1 {
+    height: 60px;
+
+    text-align: center;
+    margin: 0 0 20px 0;
+}
+
+main form {
+    width: 400px;
+
+    height: 300px;
+    display: flex;
+    flex-direction: column;
+
+    justify-content: center;
+
+}
+
+main form input,
+main form button {
+    padding: 12px;
+    margin: 7px 0;
+
+    border-radius: 5px;
+    outline: none;
+    border: none;
+    transition: all .2s ease-in;
+
+}
+
+main form input:focus {
+    box-shadow: 0px 0px 5px var(--bleu);
+}
+
+label {
+    font-weight: 900;
+}
+
+main form button {
+    color: #fff;
+    background-color: #152857;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+main form section {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 4px;
+    width: 100%;
+}
+
+main form section a {
+    color: #252525;
+    font-size: 12px;
+
+    font-weight: 900;
+
+
+}
+
+main {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: calc(80vh - 70px);
+    
+}
+
+.photo {
+    background-color: #999999;
+    padding: 12px;
+    width: 50%;
+    color: #fff;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+
+@media all and (max-width: 1172px) {
+    header nav {
+        padding: 0 100px;
+    }
+}
+
+@media all and (max-width: 862px) {
+    header nav {
+        padding: 0 50px;
+    }
+}
+
+@media all and (max-width: 700px) {
+    header nav {
+        padding: 0 10px;
+    }
+}
+
+@media all and (max-width: 444px) {
+    header nav {
+        padding: 0 10px;
+    }
+
+    main form {
+        width: 350px;
+
+
+    }
+
+}
+
+@media all and (max-width: 399px) {
+    main form {
+        width: 300px;
+
+    }
+
+    main h1 {
+        font-size: 23px;
+    }
+}
+
+@media all and (max-width: 310px) {
+    main form {
+        width: 200px;
+
+    }
+
+    main h1 {
+        font-size: 23px;
+    }
+}
+
+@media (orientation:landscape) and (max-height:466px) {
+    main form {
+
+
+
+        display: flex;
+
+    }
+
+    main form input,
+    main form button {
+        padding: 9px;
+        margin: 4px 0;
+
+        border-radius: 5px;
+        outline: none;
+        border: none;
+        transition: all .2s ease-in;
+
+    }
+
+    main {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        height: auto;
+        overflow: scroll;
+
+    }
+
+    main h1 {
+        height: 30px;
+
+        text-align: center;
+        margin-top: 20px;
+    }
+
+}

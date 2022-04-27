@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    {% load static %}
+    <link rel="stylesheet" href="{% static 'cv/style.css' %}">
+<script src="{% static 'cv/sc.js' %}" defer></script>
+<style>
+    .main {
+    display: flex;
+    height: 85vh;
+    align-items: center;
+    justify-content: center;
+    background-color: #dfe0e0;
+
+}
+a {
+    text-decoration: none;
+    color: rgb(70, 70, 245);
+}
+
+.main .under {
+
+    height: 400px;
+    width: 800px;
+    display: flex;
+
+    justify-content: start;
+    align-items: center;
+    background-color: var(--color-2);
+    border-radius: 5px;
+    box-shadow: 2px 2px 24px rgb(126, 125, 125);
+
+}
+
+.main .section1 {
+    background: white;
+    height: 100%;
+
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    padding: 60px;
+    border-radius: 5px;
+
+}
+
+.main .section1 h1 {
+    font-size: 50px;
+    color: var(--color-2);
+
+
+
+}
+
+.main .section2 {
+    padding: 12px;
+    font-size: 16px;
+    color: white;
+
+
+}
+
+.main .btn {
+    margin-top: 12px;
+    background-color: white;
+    text-align: center;
+    padding: 12px;
+    border-radius: 5px;
+    color: var(--color-2);
+    font-size: 18px;
+    font-weight: 700;
+    transition: all .5s ease;
+    cursor: pointer;
+
+
+}
+
+.main .btn:hover {
+    background-color: #e6e6e6;
+}
+
+
+</style>
+</head>
+<body>
+    
+    <nav>
+        <div class="logo"><a href="{% url 'home' %}"><h1>CV</h1></div></a>
+        <div class="open">
+            <svg class="sam" xmlns="http://www.w3.org/2000/svg" width="35"  viewBox="0 0 80 65">
+                <g id="Groupe_1" data-name="Groupe 1" transform="translate(-941 -276)">
+                <rect id="Rectangle_2" data-name="Rectangle 2" width="80" height="17" rx="8.5" transform="translate(941 276)" fill="#fff"/>
+                <rect id="Rectangle_3" data-name="Rectangle 3" width="80" height="17" rx="8.5" transform="translate(941 300)" fill="#fff"/>
+                <rect id="Rectangle_4" data-name="Rectangle 4" width="80" height="17" rx="8.5" transform="translate(941 324)" fill="#fff"/>
+                </g>
+            </svg>
+          </div>
+          <ul class="menu">
+              <li><a href="{% url 'home' %}">Acceuil</a></li>
+              <li><a href="{% url 'liste' %}">Liste</a></li>
+              <li><a href="{% url 'add' %}">Ajouter</a></li>
+                {% if user.is_authenticated %}
+                <li><a href="{% url 'logout' %}">Deconnexion</a></li>
+                <li><a href="{% url 'monprofil' %}"><img src="{{ request.user.profil.avatar.url }}" alt="" width="30" height="30" style="border-radius: 50%;"></a></li>
+                {% endif %}
+              <div class="close">
+                <svg xmlns="http://www.w3.org/2000/svg" width="35" viewBox="0 0 68.589 68.589">
+                    <g id="Groupe_2" data-name="Groupe 2" transform="translate(-1085.705 -319.205)">
+                      <rect id="Rectangle_5" data-name="Rectangle 5" width="80" height="17" rx="8.5" transform="translate(1097.726 319.205) rotate(45)" fill="#fff"/>
+                      <rect id="Rectangle_6" data-name="Rectangle 6" width="80" height="17" rx="8.5" transform="translate(1154.295 331.226) rotate(135)" fill="#fff"/>
+                    </g>
+                  </svg>
+                  
+              </div>
+          </ul>
+
+    </nav>
+    <main class="main">
+      <div class="under">
+        <div class="section1">
+            
+            <h1>BIENVENUE</h1>
+            
+        </div> 
+        <div class="section2" style="text-align: justify;">
+            <p>Nous vous proposons la facilité 
+            de créer des curriculum vite facilement
+            et gratuitement, sans devoir à le saisir.</p> 
+            
+            <a href="{% url 'add' %}"><div class="btn">Commencer</div></a>
+
+        </div>
+       </div> 
+    </main>
+
+</body> 
+</html>
+
